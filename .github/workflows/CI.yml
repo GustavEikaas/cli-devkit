@@ -18,8 +18,5 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
-        run: npx pnpm i
-
-      - name: Build project
-        run: npx pnpm build
+      - name: Install dependencies & build
+        run: npm run first-time-setup
