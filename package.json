@@ -1,6 +1,6 @@
 {
   "name": "cli-devkit",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "publishConfig": {
     "access": "public"
   },
@@ -16,8 +16,18 @@
   },
   "packageManager": "pnpm@8.0.0",
   "sideEffects": false,
-  "keywords": ["cli"],
+  "keywords": [
+    "cli"
+  ],
   "author": "Gustav Eikaas",
   "license": "MIT",
-  "files": ["dist", "package.json", "README.md"]
+  "files": [
+    "dist",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "@types/node": "^20.5.3",
+    "zod": "^3.22.2"
+  }
 }
