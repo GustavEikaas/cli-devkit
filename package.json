@@ -13,5 +13,6 @@
   "sideEffects": false,
   "keywords": ["cli"],
   "author": "Gustav Eikaas",
-  "license": "MIT"
+  "license": "MIT",
+  "files": ["dist", "package.json", "README.md"]
 }
