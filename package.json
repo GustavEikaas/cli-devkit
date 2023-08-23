@@ -1,0 +1,17 @@
+{
+  "name": "cli-devkit",
+  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "CLI devkit for making JS/TS cli tools",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -b -f"
+  },
+  "sideEffects": false,
+  "keywords": ["cli"],
+  "author": "Gustav Eikaas",
+  "license": "MIT"
+}
