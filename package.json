@@ -5,6 +5,7 @@
     "access": "public"
   },
   "description": "CLI devkit for making JS/TS cli tools",
+  "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
