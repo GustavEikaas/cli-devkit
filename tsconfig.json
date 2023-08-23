@@ -6,5 +6,8 @@
         "target": "ESNext",
         "moduleResolution": "Node",
         "allowJs": false,
+        "types": ["node"],
+        "module": "ESNext",
+        "strict": true
     }
 }
