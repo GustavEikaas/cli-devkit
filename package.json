@@ -10,7 +10,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "first-time-setup": "npm i -g pnpm@8.0.0 && pnpm install && pnpm build",
+    "first-time-setup": "npm i -g pnpm@8.0.0 typescript && pnpm install && pnpm build",
     "build": "tsc -b -f",
     "prepublish": "pnpm build"
   },
