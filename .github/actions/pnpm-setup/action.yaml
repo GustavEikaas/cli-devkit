@@ -16,6 +16,4 @@ runs:
 
     - name: Install dependencies
       shell: bash
-      run: |
-        npm i -g typescript
-        pnpm install
+      run: pnpm install
