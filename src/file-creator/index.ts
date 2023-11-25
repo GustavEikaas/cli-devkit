@@ -40,6 +40,6 @@ createFiles({
   replacer: {
     appName: "abc",
   },
-  targetDir: "./files",
-  templateDir: "./out",
+  templateDir: "./files",
+  targetDir: "./out",
 });
