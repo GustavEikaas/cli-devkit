@@ -4,10 +4,10 @@
         "outDir": "dist",
         "lib": ["ESNext", "DOM"],
         "target": "ESNext",
-        "moduleResolution": "Node",
         "allowJs": false,
         "types": ["node"],
-        "module": "ESNext",
-        "strict": true
+        "strict": true,
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
     }
 }

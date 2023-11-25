@@ -1,3 +1,3 @@
-export { Logger } from "./Logger";
-export { logger } from "./log";
-export type { FormattingRules } from "./log";
+export { Logger } from "./Logger.js";
+export { logger } from "./log.js";
+export type { FormattingRules } from "./log.js";
