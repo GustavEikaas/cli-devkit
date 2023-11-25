@@ -38,6 +38,6 @@ export function createFiles(options: CreateFilesOptions) {
 
 createFiles({
   templateDir: "./files",
-  replacer: { appName: "fs" },
+  replacer: { appName: "./App" },
   targetDir: "../out/files",
 });
