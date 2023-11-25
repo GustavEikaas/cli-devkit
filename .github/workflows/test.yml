@@ -1,4 +1,4 @@
-name: CI
+name: File creator
 
 on:
   push:
@@ -18,5 +18,8 @@ jobs:
       - name: Install dependencies & build
         run: npm run first-time-setup
 
-      - name: "test action"
+      - name: "Test file creator"
         run: npx ts-node --esm ./src/file-creator/index.ts
+
+      - name: Validate
+        run: cat ./out/main.tsx.template

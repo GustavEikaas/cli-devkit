@@ -2,6 +2,7 @@ import { join } from "path";
 import { createDirTree } from "./utils/createDirTree.js";
 import { processFile } from "./utils/processFile.js";
 import { readTemplateDir } from "./utils/readTemplateDir.js";
+import { platform } from "os";
 
 export type CreateFilesOptions = {
   templateDir: string;
@@ -9,7 +10,7 @@ export type CreateFilesOptions = {
   targetDir: string;
 };
 
-const getSeparator = () => "\\";
+const getSeparator = () => (platform() === "win32" ? "\\" : "/");
 
 export function createFiles(options: CreateFilesOptions) {
   //Read files
