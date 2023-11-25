@@ -18,5 +18,9 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies & build
-        run: npm run first-time-setup
+      - name: PNPM setup
+        uses: ./.github/actions/pnpm-setup
+
+      - name: Build
+        shell: bash
+        run: pnpm build
