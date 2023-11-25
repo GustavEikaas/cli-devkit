@@ -1,0 +1,27 @@
+name: File creator test
+
+on:
+  push:
+
+jobs:
+  test:
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: PNPM setup
+        uses: ./.github/actions/pnpm-setup
+
+      - name: Build
+        shell: bash
+        run: pnpm build
+
+      - name: "Test file creator"
+        run: npx ts-node --esm ./.github/workflows/file-creator.ts
+
+      - name: Validate
+        run: cat ./out/main.tsx

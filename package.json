@@ -1,6 +1,6 @@
 {
   "name": "cli-devkit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publishConfig": {
     "access": "public"
   },
@@ -10,7 +10,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "first-time-setup": "npm i -g pnpm@8.0.0 && pnpm install && pnpm build",
+    "first-time-setup": "npm i -g pnpm@8.0.0 typescript && pnpm install && pnpm build",
     "build": "tsc -b -f",
     "prepublish": "pnpm build"
   },
@@ -27,7 +27,10 @@
     "README.md"
   ],
   "dependencies": {
-    "@types/node": "^20.5.3",
     "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.3",
+    "typescript": "^5.3.2"
   }
 }

@@ -1,5 +1,5 @@
-import { ansiFormatting } from "./ansi";
-import { FormattingRules } from "./log";
+import { ansiFormatting } from "./ansi.js";
+import { FormattingRules } from "./log.js";
 
 type LoggerCtor = {
   globalFormatting?: FormattingRules[];
@@ -59,4 +59,14 @@ export class Logger {
       msg,
       ...[...this.globalFormatting, ...this.infoFormatting, ...args]
     );
+
+  exception = (msg: string, ...args: FormattingRules[]) => {
+    throw new Error(
+      `${escapeSequence(
+        [...this.globalFormatting, ...this.errorFormatting, ...args]
+          .map((s) => ansiFormatting[s])
+          .join(";")
+      )}${msg}${escapeSequence("0")}`
+    );
+  };
 }
