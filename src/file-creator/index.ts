@@ -35,3 +35,11 @@ export function createFiles(options: CreateFilesOptions) {
     processFile(options, file);
   });
 }
+
+createFiles({
+  replacer: {
+    appName: "abc",
+  },
+  targetDir: "./files",
+  templateDir: "./out",
+});
