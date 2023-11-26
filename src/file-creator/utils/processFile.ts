@@ -5,7 +5,6 @@ import { logger } from "../../logger/log.js";
 
 export function processFile(options: CreateFilesOptions, file: string) {
   const contentsPath = join(options.templateDir, file);
-  console.log(`reading ${contentsPath}`);
   const contents = readFileSync(contentsPath);
   const newContent = replaceFromTemplateFile(options, contents);
   writeFileSync(

@@ -2,6 +2,7 @@ import { readFileSync } from "fs";
 import { resolve } from "path";
 
 import { z } from "zod";
+import { logger } from "../index.js";
 
 const PackageJsonSchema = z.object({
   name: z.string(),
@@ -20,7 +21,7 @@ export function parsePackageJson(
     const validatedPackageJson = validatePackageJsonContents(packageJson);
     return validatedPackageJson;
   } catch (e) {
-    console.log("Failed to find package.json", e);
+    logger.exception("Failed to find package.json");
     throw new Error("");
   }
 }
