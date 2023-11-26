@@ -22,5 +22,5 @@ jobs:
       # Set token
       - run: pnpm config set '//registry.npmjs.org/:_authToken' "${{secrets.NPM_AUTH_TOKEN}}"
 
-      # Publish all packages in the workspace which version still does not exist
-      - run: pnpm publish
+      # -r makes pnpm to only run this workflow on packages where version has changed
+      - run: pnpm -r publish
