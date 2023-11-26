@@ -5,9 +5,8 @@ on:
       - main
 jobs:
   publish:
+    environment: npm
     runs-on: ubuntu-latest
-    env:
-      NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
     steps:
       - uses: actions/checkout@v3
         with:
@@ -21,7 +20,7 @@ jobs:
         run: pnpm build
 
       # Set token
-      - run: pnpm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+      - run: pnpm config set '//registry.npmjs.org/:_authToken' "${{secrets.NPM_AUTH_TOKEN}}"
 
       # Publish all packages in the workspace which version still does not exist
-      - run: pnpm publish --no-git-checks
+      - run: pnpm publish
