@@ -20,7 +20,9 @@ jobs:
         run: pnpm build
 
       # Set token
-      - run: pnpm config set '//registry.npmjs.org/:_authToken' "${{secrets.NPM_AUTH_TOKEN}}"
+      - run: |
+          pnpm config set '//registry.npmjs.org/:_authToken' "${{secrets.NPM_AUTH_TOKEN}}"
+          pnpm config set 'git-checks false'
 
       # -r makes pnpm to only run this workflow on packages where version has changed
       - run: pnpm -r publish
