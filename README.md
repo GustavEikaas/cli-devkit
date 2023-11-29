@@ -4,11 +4,15 @@
 
 Devkit for developing JS/TS CLI's
 
+Simple collection of convenience methods for building CLI's in Typescript
+
+
 ## Roadmap 👷
 
 - ANSI logger ✔
 - Package.json parser using Zod ✔
 - File template creator ✔
+- CJS/ESM support ✔
 - Options parser
 - Terminal autocomplete
 - Resolve package.json root
