@@ -1,6 +1,6 @@
 {
   "name": "cli-devkit",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publishConfig": {
     "access": "public"
   },
@@ -35,17 +35,12 @@
     "package.json",
     "README.md"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-terser": "^0.4.4",
     "@types/node": "^20.5.3",
-    "@wessberg/rollup-plugin-ts": "^2.0.4",
-    "pkgroll": "^2.0.1",
     "tsup": "^8.0.1",
-    "typescript": "^5.3.2",
-    "vite": "^5.0.2"
+    "typescript": "latest"
   }
 }
