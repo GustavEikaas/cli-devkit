@@ -8,8 +8,8 @@ Devkit for developing JS/TS CLI's
 
 - ANSI logger ✔
 - Package.json parser using Zod ✔
+- File template creator ✔
 - Options parser
 - Terminal autocomplete
 - Resolve package.json root
 - File patcher
-- File template creator
