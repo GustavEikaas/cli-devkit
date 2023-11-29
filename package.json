@@ -1,18 +1,27 @@
 {
   "name": "cli-devkit",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publishConfig": {
     "access": "public"
   },
   "description": "CLI devkit for making JS/TS cli tools",
   "type": "module",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "first-time-setup": "npm i -g pnpm@8.0.0 typescript && pnpm install && pnpm build",
     "build": "tsc -b -f",
-    "prepublish": "pnpm build"
+    "prepublish": "pnpm bundle",
+    "bundle": "tsup src/index.ts --format cjs,esm --dts --clean"
   },
   "packageManager": "pnpm@8.0.0",
   "sideEffects": false,
@@ -26,11 +35,12 @@
     "package.json",
     "README.md"
   ],
-  "dependencies": {
+  "peerDependencies": {
     "zod": "^3.22.2"
   },
   "devDependencies": {
     "@types/node": "^20.5.3",
-    "typescript": "^5.3.2"
+    "tsup": "^8.0.1",
+    "typescript": "latest"
   }
 }
