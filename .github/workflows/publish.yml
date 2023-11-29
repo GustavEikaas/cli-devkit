@@ -25,4 +25,4 @@ jobs:
           pnpm config set 'git-checks false'
 
       # -r makes pnpm to only run this workflow on packages where version has changed
-      - run: pnpm -r publish
+      - run: pnpm -r publish --no-git-checks
