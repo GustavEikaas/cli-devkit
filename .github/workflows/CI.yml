@@ -18,8 +18,11 @@ jobs:
         with:
           node-version: 18
 
-      - name: PNPM setup
-        uses: ./.github/actions/pnpm-setup
+      - name: PNPM cache setup
+        uses: GustavEikaas/pnpm-setup@v0.0.2
+
+      - name: Pnpm install
+        run: "pnpm i"
 
       - name: Build
         shell: bash
