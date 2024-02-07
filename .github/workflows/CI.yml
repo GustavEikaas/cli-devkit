@@ -13,16 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: PNPM cache setup
-        uses: GustavEikaas/pnpm-setup@v0.0.2
-
-      - name: Pnpm install
-        run: "pnpm i"
+      - name: PNPM setup
+        uses: GustavEikaas/pnpm-setup/actions/pnpm-setup@main
 
       - name: Build
         shell: bash
