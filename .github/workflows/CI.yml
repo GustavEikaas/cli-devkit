@@ -14,7 +14,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: PNPM setup
-        uses: GustavEikaas/pnpm-setup/actions/pnpm-setup@main
+        uses: GustavEikaas/pnpm-setup/.github/actions/pnpm-setup@main
 
       - name: Build
         shell: bash
