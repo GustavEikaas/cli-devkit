@@ -13,7 +13,7 @@ jobs:
           fetch-depth: 0
 
       - name: PNPM setup
-        uses: ./.github/actions/pnpm-setup
+        uses: GustavEikaas/pnpm-setup/actions/pnpm-setup@main
 
       - name: Build
         shell: bash

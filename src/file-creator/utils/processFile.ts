@@ -7,6 +7,7 @@ export function processFile(options: CreateFilesOptions, file: string) {
   const contentsPath = join(options.templateDir, file);
   const contents = readFileSync(contentsPath);
   const newContent = replaceFromTemplateFile(options, contents);
+
   writeFileSync(
     join(options.targetDir, file.replace(".template", "")),
     newContent
