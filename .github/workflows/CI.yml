@@ -16,7 +16,7 @@ jobs:
       - name: PNPM setup
         uses: GustavEikaas/pnpm-setup/.github/actions/pnpm-setup@main
         with:
-          node-version: "20"
+          node-version: 20
           pnpm-version: "8.11.0"
 
       - name: Build
