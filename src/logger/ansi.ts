@@ -6,6 +6,7 @@
 export const ansiFormatting = {
   ["Reset"]: 0,
   ["Bold"]: 1,
+
   /** Not widely supported */
   ["Faint[PS]"]: 2,
   /** Not widely supported */
