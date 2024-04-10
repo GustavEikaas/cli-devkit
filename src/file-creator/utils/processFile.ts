@@ -3,6 +3,11 @@ import { join } from "path";
 import { CreateFilesOptions } from "../index.js";
 import { logger } from "../../logger/log.js";
 
+type S = {
+  name: string
+}
+
+
 export function processFile(options: CreateFilesOptions, file: string) {
   const contentsPath = join(options.templateDir, file);
   const contents = readFileSync(contentsPath);
@@ -27,3 +32,4 @@ const replaceFromTemplateFile = (opt: CreateFilesOptions, contents: Buffer) => {
 
   return value;
 };
+

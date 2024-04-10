@@ -24,8 +24,7 @@ export class Logger {
     formattingRules.globalFormatting &&
       (this.globalFormatting = formattingRules.globalFormatting);
 
-    formattingRules.successFormatting &&
-      (this.successFormatting = formattingRules.successFormatting);
+    formattingRules.successFormatting && (this.successFormatting = formattingRules.successFormatting);
 
     formattingRules.warningFormatting &&
       (this.warningFormatting = formattingRules.warningFormatting);
