@@ -1,4 +1,4 @@
-name: File creator test
+name: nvim debug
 on:
   workflow_dispatch:
     inputs:
