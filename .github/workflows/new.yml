@@ -20,14 +20,14 @@ on:
 
 jobs:
   test:
-    runs-on: ${{matrix.os}}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
-      - name: Build
+      - name: echo
         shell: bash
-        run: echo ${{inputs.name}}
+        run: |
+          echo ${{ github.event.inputs.message}}
+          echo ${{ github.event.inputs.name }}
+          echo ${{ github.event.inputs.use-emoji}}
+          echo ${{ github.event.inputs.environment}}
