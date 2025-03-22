@@ -1,5 +1,6 @@
 name: CI
 
+run-name: Checking for errors
 on:
   push:
     branches: [main]

@@ -1,4 +1,4 @@
-name: File creator test
+name: nvim debug
 on:
   workflow_dispatch:
     inputs:
@@ -20,14 +20,18 @@ on:
 
 jobs:
   test:
-    runs-on: ${{matrix.os}}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
-      - name: Build
+      - name: sleep
         shell: bash
-        run: echo ${{inputs.name}}
+        run: sleep 60
+
+      - name: echo
+        shell: bash
+        run: |
+          echo ${{ github.event.inputs.message}}
+          echo ${{ github.event.inputs.name }}
+          echo ${{ github.event.inputs.use-emoji}}
+          echo ${{ github.event.inputs.environment}}
